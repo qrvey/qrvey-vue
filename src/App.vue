@@ -1,28 +1,44 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Builders :config="configObject"></Builders>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Builders from "@/components/Builders";
+
+const importScript = (url) => {
+  document.body.appendChild(Object.assign(document.createElement('script'), {
+    type: 'text/javascript',
+    defer: true,
+    src: url
+  }));
+}
+
+const configObject = {
+  domain: 'https://manualqastg.qrvey.com',
+  appid: 'L4NjFnKXK',
+  userid: 'pwWErgJ',
+  apikey: 'TlyeWkQ5tH4m05r3WXUqc9ILayESPlhd6hJaCut0',
+};
+
+importScript('https://580703004664postdev1qrveywidgets.s3.amazonaws.com/widgets-launcher/app.js');
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Builders
+  },
+  data() {
+    return {
+      configObject
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    margin: 0;
+  }
 </style>
