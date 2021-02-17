@@ -41,7 +41,7 @@ In order to use the custom element within the Vue app, inform the Vue compiler w
 
 ## Creating End User component
 
-Now you are ready to use the **qrvey-end-user** tag. To avoid issues with non-scalar data (data that is not a string or number) **qrvey-end-user** element was designed to work with a string property called **settings**, and a variable in **window** which name should be the exact value of the **settings** property.
+Now you are ready to use the **qrvey-end-user** element. To avoid issues with non-scalar data (data that is not a string or number) **qrvey-end-user** was designed to work with a string property called **settings**, and a variable in **window** which name should be the exact value of the **settings** property.
 For this example we are going to wrap the web component in a Vue Component:
 
     // components/EndUser.vue
@@ -103,4 +103,4 @@ Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 ![Preview End User Demo](https://s3.amazonaws.com/cdn.qrvey.com/images/preview-end-user.png)
 
 ## Troubleshooting
-If you are experiencing issues with **qrvey-end-user** element in your React app, please contact Qrvey team.
+If you are experiencing issues with **qrvey-end-user** element in your Vue.js app, please contact Qrvey team.
